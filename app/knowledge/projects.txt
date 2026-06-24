@@ -1,0 +1,12 @@
+text summarizer project: a backend to frontend project, which simulates a website which summarizes texts. I used the huggingface library to summarize the text. there is a limit of 800 words because of this. in this project I coded in python, javascript, html and CCS.
+
+password authentication system: a system which protects a "vault" and to access it one must sign up with a username and password. the system can generate a strong password, and 
+checks if the password checks out during the log in. To secure the "vault", I used BCrypt to secure the passwords. This project is only in backend, and was written in Java. The main focus was learning a bit about cryptography.
+
+personal banking system: a system which keeps track of expenses throughout time. can return the total amount each month or year. was written in c++.
+
+Chinese checkers: this is the first project I ever worked on, during my first semester of the first year. The project implements the Chinese checkers game, and could be 
+played by real players and computer players. the computer player is implemented smartly and will try to win, and not go in a random direction.
+
+my favourite projects: the text summarizer and password authentication system were my favourite projects. They introduced me to new worlds in computer science and were challenging.
+

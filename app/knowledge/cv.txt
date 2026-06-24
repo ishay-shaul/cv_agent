@@ -1,0 +1,38 @@
+Name: Ishay Shaul
+
+Age: 26
+
+Current Residence: Jerusalem
+
+Status: University student
+
+courses taken: Intro to Computer Science, Data Structures, intro to statistics, C/C++ for practical algorithms, Algorithms, Intro to Machine Learning, Object Oriented Programming (OOP),
+Regression and Linear models for Computer Science, Optimization and convex functions, statistics lab, Nand2Tetris(parallel to Computer Architecture).
+
+favourite courses: All courses that deal with AI, such as Intro to Machine Learning and Deep Learning.
+
+courses currently taking: Into to Deep Learning, intro to Data Science, Operating Systems (OS), Modern Statistical Data Analysis.
+
+what I am looking for: I am looking for an intellectually challenging job which will help me grow in the high-tech world. A workspace with a positive environment, 
+with people who help each other at need.
+
+education: currently into my third year of my bachelors degree, studying Computer Science and Statistics at the Hebrew University in Jerusalem. 
+
+Coding Languages: Python, C++, C, Java, R.
+
+favourite programming language: Python
+
+Python Libraries: Pytorch, NumPy, pandas.
+
+Languages: Fluent in both English and Hebrew.
+
+familiar with Linux operating system.
+
+work ethic: High work ethic and the ability to work effectively in a team.
+
+Military Career: served as a sergeant in the Golani brigade.
+
+What I bring: 1) Leadership- have experienced leading teams as big a two dozen. 2) Reliability- ability to work under pressure. 3) Communication- excellent interpersonal 
+communication skills.
+
+

@@ -1,0 +1,2 @@
+password authentication system: a system which protects a "vault" and to access it one must sign up with a username and password. the system can generate a strong password, and 
+checks if the password checks out during the log in. To secure the "vault", I used BCrypt to secure the passwords. This project is only in backend, and was written in Java. The main focus was learning a bit about cryptogra
