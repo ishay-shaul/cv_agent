@@ -1,7 +1,9 @@
 # cv agent:
 ## how to run: 
-currently, the website isnt up, so the following must be done:
-1) run the main file using "python main.py".
-2) when the main is running go to: http://localhost:8000/docs
-3) ask questions!!
-note: soon the website will be up
+1) Enter this Website: https://cv-agent-f031.onrender.com/docs
+2) You will see a green bar across the screen, which is labeled "/ask". click on the down arrow to the right of the bar.
+3) click "Try it out"
+4) Now, you will see "{
+    "question": "String"
+   }" , replace "String wit hyour question"
+5) enjoy!! 
