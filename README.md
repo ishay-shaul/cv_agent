@@ -6,4 +6,5 @@
 4) Now, you will see "{
     "question": "String"
    }" , replace "String wit hyour question"
-5) enjoy!! 
+5) enjoy!!
+   note: the website may take a minute to run
