@@ -119,8 +119,9 @@ button:hover {
 }
 
 button:disabled {
+  color: white;
   cursor: wait;
-  opacity: 0.72;
+  opacity: 0.85;
   transform: none;
   box-shadow: none;
 }
