@@ -6,7 +6,6 @@ const questionHint = document.getElementById("question-hint");
 
 const resetButton = () => {
   askButton.disabled = false;
-  askButton.textContent = "Ask";
 };
 
 const showAnswer = (text, isError = false) => {
@@ -23,7 +22,6 @@ const setLoading = () => {
   answerOutput.classList.add("loading");
   answerOutput.classList.remove("error");
   askButton.disabled = true;
-  askButton.textContent = "Asking...";
   answerPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
 };
 

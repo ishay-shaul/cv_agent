@@ -102,8 +102,10 @@ textarea {
 
 button {
   width: fit-content;
+  min-width: 5.5rem;
   align-self: start;
   padding: 0.95rem 1.4rem;
+  white-space: nowrap;
   border: none;
   border-radius: 14px;
   background: linear-gradient(135deg, #38bdf8, #2563eb);
