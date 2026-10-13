@@ -1,26 +1,49 @@
 const questionInput = document.getElementById("question-input");
+const answerPanel = document.getElementById("answer-panel");
 const answerOutput = document.getElementById("answer-output");
 const askButton = document.getElementById("ask-button");
+const questionHint = document.getElementById("question-hint");
+
+const resetButton = () => {
+  askButton.disabled = false;
+};
 
 const showAnswer = (text, isError = false) => {
+  answerPanel.hidden = false;
   answerOutput.textContent = text;
-  answerOutput.classList.toggle("loading", false);
-  answerOutput.style.color = isError ? "#f87171" : "var(--text)";
+  answerOutput.classList.remove("loading");
+  answerOutput.classList.toggle("error", isError);
+  resetButton();
 };
 
 const setLoading = () => {
-  answerOutput.textContent = "Waiting for the agent...";
+  answerPanel.hidden = false;
+  answerOutput.textContent = "Waiting for the answer...";
   answerOutput.classList.add("loading");
-  answerOutput.style.color = "var(--muted)";
+  answerOutput.classList.remove("error");
+  askButton.disabled = true;
+  answerPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+};
+
+const showHint = (text) => {
+  questionHint.hidden = false;
+  questionHint.textContent = text;
+};
+
+const clearHint = () => {
+  questionHint.hidden = true;
+  questionHint.textContent = "";
 };
 
 const askAgent = async () => {
   const question = questionInput.value.trim();
   if (!question) {
-    showAnswer("Please type a question before asking.", true);
+    showHint("Type a question in the box above, then click Ask.");
+    questionInput.focus();
     return;
   }
 
+  clearHint();
   setLoading();
 
   try {
@@ -33,8 +56,16 @@ const askAgent = async () => {
     });
 
     if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.detail || "Agent request failed.");
+      let detail = "The agent could not answer that question.";
+      try {
+        const errorData = await response.json();
+        if (errorData.detail) {
+          detail = errorData.detail;
+        }
+      } catch (_parseError) {
+        // Keep the fallback message when the server does not return JSON.
+      }
+      throw new Error(detail);
     }
 
     const result = await response.json();
@@ -49,5 +80,10 @@ questionInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter" && !event.shiftKey) {
     event.preventDefault();
     askAgent();
+  }
+});
+questionInput.addEventListener("input", () => {
+  if (questionInput.value.trim()) {
+    clearHint();
   }
 });

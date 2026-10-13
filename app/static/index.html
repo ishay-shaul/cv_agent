@@ -4,25 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV Agent</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
     <div class="app-shell">
         <header>
             <h1>CV Agent</h1>
+            <p class="lead">Type your question in the box, then click Ask. The answer will show up in a new box below.</p>
         </header>
         <main>
-            <section class="panel panel-top">
-                <label for="question-input">Ask a question:</label>
-                <textarea id="question-input" placeholder="Type your question here..."></textarea>
-                <button id="ask-button">Ask Agent</button>
+            <section class="panel panel-question" aria-labelledby="question-heading">
+                <h2 id="question-heading">Ask your question</h2>
+                <label class="sr-only" for="question-input">Your question</label>
+                <textarea id="question-input" placeholder="What would you like to know?"></textarea>
+                <p id="question-hint" class="hint" hidden></p>
+                <button id="ask-button" type="button">Ask</button>
             </section>
-            <section class="panel panel-bottom">
-                <label for="answer-output">Agent answer:</label>
-                <div id="answer-output" class="answer-box">Your answer will appear here.</div>
+            <section id="answer-panel" class="panel panel-answer" hidden aria-labelledby="answer-heading">
+                <h2 id="answer-heading">Answer</h2>
+                <div id="answer-output" class="answer-box" role="status" aria-live="polite"></div>
             </section>
         </main>
     </div>
-    <script src="script.js"></script>
+    <script src="/static/script.js"></script>
 </body>
 </html>
