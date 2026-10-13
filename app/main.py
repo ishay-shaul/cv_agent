@@ -1,4 +1,6 @@
 import os
+from pathlib import Path
+
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
@@ -20,7 +22,8 @@ app = FastAPI(
     version="0.1.0",
 )
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 # 2. Path to the folder where ChromaIndexer.py saved your database
 CHROMA_PATH = "./chroma_db"
@@ -89,4 +92,4 @@ async def health_check():
 
 @app.get("/")
 async def root():
-    return {"message": "CV Agent API is running"}
+    return FileResponse(STATIC_DIR / "index.html")
